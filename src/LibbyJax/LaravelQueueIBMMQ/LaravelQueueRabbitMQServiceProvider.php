@@ -3,7 +3,7 @@
 namespace LibbyJax\LaravelQueueRabbitMQ;
 
 use Illuminate\Support\ServiceProvider;
-use LibbyJax\LaravelQueueRabbitMQ\Queue\Connectors\RabbitMQConnector;
+use LibbyJax\LaravelQueueRabbitMQ\Queue\Connectors\IBMMQConnector;
 
 class LaravelQueueIBMMQServiceProvider extends ServiceProvider
 {
@@ -16,7 +16,7 @@ class LaravelQueueIBMMQServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../../config/rabbitmq.php', 'queue.connections.rabbitmq'
+            __DIR__.'/../../config/ibmmq.php', 'queue.connections.ibmmq'
         );
     }
 
@@ -31,8 +31,8 @@ class LaravelQueueIBMMQServiceProvider extends ServiceProvider
          * @var \Illuminate\Queue\QueueManager $manager
          */
         $manager = $this->app['queue'];
-        $manager->addConnector('rabbitmq', function () {
-            return new RabbitMQConnector;
+        $manager->addConnector('ibmmq', function () {
+            return new IBMMQConnector;
         });
     }
 
