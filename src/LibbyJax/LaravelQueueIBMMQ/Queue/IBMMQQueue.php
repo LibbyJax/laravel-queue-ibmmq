@@ -1,6 +1,6 @@
 <?php
 
-namespace VladimirYuldashev\LaravelQueueRabbitMQ\Queue;
+namespace LibbyJax\LaravelQueueIBMMQ\Queue;
 
 use DateTime;
 use Illuminate\Contracts\Queue\Queue as QueueContract;
@@ -9,9 +9,9 @@ use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Wire\AMQPTable;
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob;
+use LibbyJax\LaravelQueueIBMMQ\Queue\Jobs\IBMMQJob;
 
-class RabbitMQQueue extends Queue implements QueueContract
+class IBMMQQueue extends Queue implements QueueContract
 {
 
 	protected $connection;
