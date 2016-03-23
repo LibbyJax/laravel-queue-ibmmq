@@ -1,12 +1,12 @@
 <?php
 
-namespace VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Connectors;
+namespace LibbyJax\LaravelQueueIBMMQ\Queue\Connectors;
 
 use Illuminate\Queue\Connectors\ConnectorInterface;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
+use LibbyJax\LaravelQueueIBMMQ\Queue\IBMMQQueue;
 
-class RabbitMQConnector implements ConnectorInterface
+class IBMMQConnector implements ConnectorInterface
 {
 
 	/**
@@ -22,7 +22,7 @@ class RabbitMQConnector implements ConnectorInterface
 		$connection = new AMQPStreamConnection($config['host'], $config['port'], $config['login'], $config['password'],
 				$config['vhost']);
 
-		return new RabbitMQQueue(
+		return new IBMMQQueue(
 			$connection,
 			$config
 		);
