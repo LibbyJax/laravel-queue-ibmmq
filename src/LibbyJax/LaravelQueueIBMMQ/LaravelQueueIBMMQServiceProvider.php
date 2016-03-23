@@ -1,9 +1,9 @@
 <?php
 
-namespace LibbyJax\LaravelQueueRabbitMQ;
+namespace LibbyJax\LaravelQueueIBMMQ;
 
 use Illuminate\Support\ServiceProvider;
-use LibbyJax\LaravelQueueRabbitMQ\Queue\Connectors\IBMMQConnector;
+use LibbyJax\LaravelQueueIBMMQ\Queue\Connectors\IBMMQConnector;
 
 class LaravelQueueIBMMQServiceProvider extends ServiceProvider
 {
