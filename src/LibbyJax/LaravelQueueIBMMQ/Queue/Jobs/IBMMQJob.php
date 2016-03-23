@@ -1,15 +1,15 @@
 <?php
 
-namespace VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs;
+namespace LibbyJax\LaravelQueueIBMMQ\Queue\Jobs;
 
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Queue\Job as JobContract;
 use Illuminate\Queue\Jobs\Job;
 use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Message\AMQPMessage;
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\RabbitMQQueue;
+use LibbyJax\LaravelQueueIBMMQ\Queue\IBMMQQueue;
 
-class RabbitMQJob extends Job implements JobContract
+class IBMMQJob extends Job implements JobContract
 {
 
     protected $connection;
@@ -19,7 +19,7 @@ class RabbitMQJob extends Job implements JobContract
 
     public function __construct(
         Container $container,
-        RabbitMQQueue $connection,
+        IBMMQQueue $connection,
         AMQPChannel $channel,
         $queue,
         AMQPMessage $message
