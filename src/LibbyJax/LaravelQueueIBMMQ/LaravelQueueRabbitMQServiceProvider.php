@@ -1,11 +1,11 @@
 <?php
 
-namespace VladimirYuldashev\LaravelQueueRabbitMQ;
+namespace LibbyJax\LaravelQueueRabbitMQ;
 
 use Illuminate\Support\ServiceProvider;
-use VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Connectors\RabbitMQConnector;
+use LibbyJax\LaravelQueueRabbitMQ\Queue\Connectors\RabbitMQConnector;
 
-class LaravelQueueRabbitMQServiceProvider extends ServiceProvider
+class LaravelQueueIBMMQServiceProvider extends ServiceProvider
 {
 
     /**
